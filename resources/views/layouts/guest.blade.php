@@ -18,7 +18,14 @@
     </head>
     <body>
         <div class="font-sans text-gray-900 antialiased">
-            {{ $slot }}
+            <div class="min-h-screen bg-gray-100">
+                @include('layouts.navigation-guest')
+
+                <!-- Page Content -->
+                <main>
+                    {{ $slot }}
+                </main>
+            </div>
         </div>
     </body>
 </html>
